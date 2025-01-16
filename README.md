@@ -4,7 +4,7 @@ To search the library of open access datasets click [HERE](https://xanderhuggins
 _-> this will take you to a github pages with a searchable table._
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/XanderHuggins/groundwater-SES-data-review/main/assets/search_screenshot.png" 
+  <img src="https://raw.githubusercontent.com/XanderHuggins/groundwater-SES-data-review/refs/heads/main/assets/search_screenshot.png" 
   width="100%"/>
 </p>
 <br/> 
