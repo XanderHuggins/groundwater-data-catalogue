@@ -1,0 +1,34 @@
+---
+title: "Searchable library of open data to study global groundwater in social-ecological systems"
+output: 
+  html_document:
+    theme: united
+    toc: no
+---
+
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, escape=FALSE}
+library(DT)
+library(googlesheets4)
+
+gs = googlesheets4::read_sheet(ss = "https://docs.google.com/spreadsheets/d/1GBaYiy6crk7h6oebUCoiXRuu0wvXJmgAaJ_5DB5HPrQ/edit?usp=sharing", sheet = 1) |> 
+  dplyr::filter(!is.na(dataset)) |> dplyr::filter(!is.na(data)) |>  
+  dplyr::select(c(dataset, author, system, paper, data, order, form, type, method, spatial, begin, end, step, iso_1, iso_2, license))
+
+gs$paper <- sprintf(
+  '<a href="%s" target="_blank">%s</a>',
+  gs$paper,   # The URL
+  "DOI link"    # The link text
+)
+
+gs$data <- sprintf(
+  '<a href="%s" target="_blank">%s</a>',
+  gs$data,   # The URL
+  "DOI link"    # The link text
+)
+
+datatable(
+  gs,
+  escape = FALSE, 
+  options = list(pageLength = 10, searchHighlight = TRUE, scrollX=T)
+)
