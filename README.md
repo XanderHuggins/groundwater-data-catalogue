@@ -1,6 +1,6 @@
 ### Global open access data to study groundwater in social-ecological systems
 
-To search the library of open access datasets click [HERE](https://xanderhuggins.github.io/groundwater-SES-data-review/searchable_library.html) <br>
+To search the library of open access datasets click [HERE](https://xanderhuggins.github.io/groundwater-SES-data-library/searchable_library.html) <br>
 _-> this will take you to a github pages with a searchable table._
 
 <p align="center">
