@@ -9,11 +9,9 @@ _-> this will take you to a github pages with a searchable table._
 </p>
 <br/> 
 
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf1bNylF2KACKtHVGhS5irJdwHMijSVkxXglh7UO9r7gsUBMA/viewform?embedded=true" width="640" height="597" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-
 To download a `.csv` file of the library of datasets and their metadata click [HERE](). <br> 
 _-> this will take you to the archived repository._ 
 
-Contact: <br>                             
+Contact:<br>                             
 **Xander Huggins** <br>
 xander [dot] huggins [at] ubc [dot] ca
