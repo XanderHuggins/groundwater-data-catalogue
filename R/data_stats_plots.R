@@ -149,7 +149,7 @@ for (vii in unique(gs$system)) {
 ### -----------\
 scale_lookup = googlesheets4::read_sheet(ss = "https://docs.google.com/spreadsheets/d/1GBaYiy6crk7h6oebUCoiXRuu0wvXJmgAaJ_5DB5HPrQ/edit?usp=sharing", sheet = 2)
 
-gs_scale = merge(x= gs, y= scale_lookup, by.x= "spatial", by.y = "spatial")
+gs_scale = base::merge(x= gs, y= scale_lookup, by.x= "spatial", by.y = "spatial")
 
 table(gs_scale$scale_class)
 
@@ -167,15 +167,16 @@ scale_plot_df
 
 ggplot(scale_plot_df, aes(fill=system, y=count, x=plot_order)) + 
   geom_bar(position="stack", stat="identity") +
-  cowplot::theme_nothing() +
-  # cowplot::theme_minimal_grid() + 
+  # cowplot::theme_nothing() +
+  cowplot::theme_minimal_grid() +
   theme(legend.position="none") +
   coord_cartesian(expand = 0) +
   scale_fill_met_d(name = "Manet", direction = 1, n = 8, override.order = FALSE)
 
 
 ggsave(plot = last_plot(),
-       filename = here("plots/scale_distribution.png"),
+       # filename = here("plots/scale_distribution.png"),
+       filename = here("plots/scale_distribution_wgrid.png"),
        width = 8,
        height = 5,
        # height = 5,
@@ -201,7 +202,7 @@ natearth = rnaturalearth::ne_countries(scale = 110) |> vect()
 # determine frequency of authorship per country
 gs_authorship = gs |> filter(order != "2_Implicit")
 
-nat_count = c(gs$iso_1, gs_authorship$iso_2) |> table() |> 
+nat_count = c(gs_authorship$iso_1, gs_authorship$iso_2) |> table() |> 
   as.data.frame() |> set_colnames(c("ISO", "count"))
 
 natearth = merge(x = natearth, 
@@ -224,11 +225,11 @@ map =
           n = 5, 
           style = "jenks",
           colorNA = "grey90") +
-  # tm_borders(col = "black", lwd = 1) +
+  tm_borders(col = "black", lwd = 1) +
   tm_shape(gwd) +
-  tm_raster(palette = "red")+ 
+  tm_raster(palette = "red") +
   tm_shape(natearth |> st_as_sf()) + tm_borders(col = "black", lwd = 0.2) +
-  tm_layout(legend.show = F, legend.frame = F, frame = F, bg.color = "transparent")
+  tm_layout(legend.show = T, legend.frame = F, frame = F, bg.color = "transparent")
 map
 
 tmap_save(map, here("plots/country_representation_map.png"), 
@@ -296,14 +297,15 @@ ts_avail_order_plot = ts_avail_order |> group_by(year, order) |> summarise(count
 # plot by system ----------------------------------------
 ggplot(ts_avail_syst_plot, aes(fill=system, y=count, x=year)) + 
   geom_bar(position="stack", stat="identity", width = 1) +
-  # cowplot::theme_minimal_grid() +
-  cowplot::theme_nothing() +
+  cowplot::theme_minimal_grid() +
+  # cowplot::theme_nothing() +
   # theme(legend.position="none") +
   coord_cartesian(expand = 0, xlim = c(1970, 2030)) +
   scale_fill_met_d(name = "Manet", direction = 1, n = 8, override.order = FALSE)
 
 ggsave(plot = last_plot(),
        filename = here("plots/time_series_per_system_wgrid.png"),
+       # filename = here("plots/time_series_per_system.png"),
        width = 8,
        height = 5,
        # height = 5,
@@ -319,7 +321,7 @@ ggplot(ts_avail_scale_plot, aes(fill=as.factor(scale), y=count, x=year)) +
   scale_fill_met_d(name = "Tam", direction = 1, n = 7, override.order = FALSE)
 
 ggsave(plot = last_plot(),
-       filename = here("plots/time_series_per_scale_wgrid.png"),
+       filename = here("plots/time_series_per_scale.png"),
        width = 8,
        height = 5,
        # height = 5,

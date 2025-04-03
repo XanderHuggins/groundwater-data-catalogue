@@ -1,11 +1,40 @@
 ---
-title: "Searchable library of open data to study global groundwater in social-ecological systems"
+title: "Searchable catalogue of open data to study global groundwater in social-ecological systems"
 output: 
   html_document:
     theme: united
     toc: no
 ---
-
+<!-- Info box at top of page -->
+<div style="border: 2px solid #007BFF; padding: 15px; background-color: #f8f9fa; border-radius: 10px; margin-bottom: 20px;">
+  <p>
+  <strong>Explore Open Groundwater Data:</strong>
+   This catalogue provides open-access global datasets related to groundwater in social-ecological systems.
+  </p>
+  
+  <p>
+  📃 <a href="https://doi.org/10.31223/X5XB07" target="_blank">Read more </a> about the project
+   (<em>link to preprint, opens in new tab</em>)
+  </p>
+  
+  
+  <p>
+  💡 <a href="https://cryptpad.fr/form/#/2/form/view/K+LOBsQzQ679qinrawnzvv2rlZTh0U6qteJAZFIZ3Co/" target="_blank">
+  Submit data </a> to the catalogue 
+  (<em>link to the submission form, opens in new tab</em>)
+  </p>
+  
+  <p>
+  <em> note: we host this submission form on <a href="https://cryptpad.org/" target="_blank"> CryptPad</a>, 
+  a free, open source, and end-to-end encrypted service.</em>
+  </p>
+  
+   <p>
+  <strong>This is the initial version (V1) of the catalogue. </strong> <br>
+  We will release new versions periodically, and will provide a readme file of catalogue changes with each new release.
+  </p>
+  
+</div>
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE, escape=FALSE}
 library(DT)
