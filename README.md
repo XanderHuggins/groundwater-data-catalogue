@@ -1,16 +1,17 @@
-### Global open access data to study groundwater in social-ecological systems
+### Code repository for the global groundwater data catalogue project
 
-To search the library of open access datasets click [HERE](https://xanderhuggins.github.io/groundwater-SES-data-catalogue/searchable_library.html) <br>
-_-> this will take you to a github pages with a searchable table._
+Please choose how you would like to interact with the project:
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/XanderHuggins/groundwater-SES-data-review/refs/heads/main/assets/search_screenshot.png" 
-  width="100%"/>
-</p>
-<br/> 
+1️⃣: **READ**📃 the preprint documenting the catalogue [here](https://doi.org/10.31223/X5XB07) <br>
+_-> this will take you to the EarthArXiv preprint service._
 
-To download a `.csv` file of the library of datasets and their metadata click [HERE](). <br> 
-_-> this will take you to the archived repository._ 
+2️⃣: **ACCESS** 🔍 the catalogue [here](https://xanderhuggins.github.io/groundwater-SES-data-catalogue/searchable_library.html) <br>
+_-> this will take you to the searchable catalogue._
+
+3️⃣: **CONTRIBUTE**💡 to the catalogue [here](https://cryptpad.fr/form/#/2/form/view/K+LOBsQzQ679qinrawnzvv2rlZTh0U6qteJAZFIZ3Co/) <br>
+_-> this will take you to the submission form to add datasets to the catalogue._
+
+To download a `.csv` file of the library of datasets and their metadata click [HERE](). (This link will activate following manuscript acceptance)<br> 
 
 Contact:<br>                             
 **Xander Huggins** <br>
