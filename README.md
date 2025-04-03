@@ -12,8 +12,10 @@ _-> this will take you to the searchable catalogue._
 _-> this will take you to the submission form to add datasets to the catalogue._
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/XanderHuggins/groundwater-SES-data-review/refs/heads/main/assets/search_screenshot.png" 
-  width="100%"/>
+  <a href="https://xanderhuggins.github.io/groundwater-SES-data-catalogue/searchable_library.html"> 
+    <img src="https://raw.githubusercontent.com/XanderHuggins/groundwater-SES-data-review/refs/heads/main/assets/search_screenshot.png" 
+    width="100%"/>
+  </a>
 </p>
 <br/> 
 
