@@ -8,7 +8,7 @@ output:
 <!-- Info box at top of page -->
 <div style="border: 2px solid #007BFF; padding: 15px; background-color: #f8f9fa; border-radius: 10px; margin-bottom: 20px;">
   <p>
-  <strong>Explore Open Groundwater Data:</strong>
+  <strong>Find open groundwater data:</strong>
    This catalogue provides open-access global datasets related to groundwater in social-ecological systems.
   </p>
   
@@ -42,7 +42,7 @@ library(googlesheets4)
 
 gs = googlesheets4::read_sheet(ss = "https://docs.google.com/spreadsheets/d/1GBaYiy6crk7h6oebUCoiXRuu0wvXJmgAaJ_5DB5HPrQ/edit?usp=sharing", sheet = 1) |> 
   dplyr::filter(!is.na(dataset)) |> dplyr::filter(!is.na(data)) |>  
-  dplyr::select(c(dataset, author, system, paper, data, order, form, type, method, spatial, begin, end, step, iso_1, iso_2, license))
+  dplyr::select(c(dataset, author, system, paper, data, relation, form, type, method, spatial, begin, end, step, iso_1, iso_2, license))
 
 gs$paper <- sprintf(
   '<a href="%s" target="_blank">%s</a>',
