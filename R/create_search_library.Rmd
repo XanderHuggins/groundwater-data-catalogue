@@ -23,13 +23,13 @@ output:
 
 <!-- Header image (instead of page title) -->
 <div style="text-align: center; margin-bottom: 20px;">
-  <img src="your-header-image.png" alt="Global Groundwater Catalogue" style="max-width: 100%; height: auto;">
+  <img src="https://raw.githubusercontent.com/XanderHuggins/groundwater-data-catalogue/refs/heads/main/assets/catalogue-header.png" alt="Global Groundwater Catalogue" style="max-width: 100%; height: auto;">
 </div>
 
 <!-- BOX 1: about -->
-<div style="border: 5px solid #00777D; padding: 10px; background-color: #f8f8f8; border-radius: 10px; margin-bottom: 20px;">
-   <p> ❓**About**: this catalogue provides a searchable database of open-access global datasets relevant for global studies on groundwater in social-ecological and Earth systems.  <br>
-    <hr style="border: none; height: 2px; background-color: #00777D; margin: 5px 0;">
+<div style="border: 4px solid #00777D; padding: 0px 10px 0px; background-color: #f8f8f8; border-radius: 10px; margin-bottom: 20px;">
+   <p>❓**About**: this is a searchable catalogue of open-access global datasets relevant for global studies on groundwater in social-ecological and Earth systems.  <br>
+    
   **Read more** about the data catalogue in the associated paper: <a href="https://doi.org/10.1088/1748-9326/adf127" target="_blank">📃Huggins et al. *Environ. Res. Lett.* 2025 </a>
   <span class="para-text">
     (<em>link to the paper, opens in new tab</em>)
@@ -37,11 +37,11 @@ output:
   </p>
 </div>
 
-<!-- Info box at top of page -->
-<div style="border: 5px solid #00777D; padding: 10px; background-color: #f8f8f8; border-radius: 10px; margin-bottom: 20px;">
+<!-- Box 2: version and submission form link -->
+<div style="border: 4px solid #00777D; padding: 10px 10px 0px; background-color: #f8f8f8; border-radius: 10px; margin-bottom: 20px;">
   <p>
   <strong>This is the initial release (version 1) of the catalogue. </strong> <br>
-  We will release new versions periodically, and each release will be accompanied by a changelog.  All metadata pertaining to each release can be found in this GitHub repository <a href="https://github.com/XanderHuggins/groundwater-data-catalogue/tree/main/catalogue_metadata" target="_blank"> folder</a>.
+  New versions will be released periodically and accompanied by a changelog.  All metadata pertaining to each release of the catalogue can be found in this GitHub repository <a href="https://github.com/XanderHuggins/groundwater-data-catalogue/tree/main/data" target="_blank"> folder</a>.
   <span class="para-text">
     (<em>link to the GitHub folder, opens in new tab</em>)
   </span>
@@ -61,7 +61,7 @@ output:
   </span>
 </div>
 
-<div style="margin-top: -0.3em; font-size: 0.9em; color: #6c757d;">
+<div style="margin-top: -0.3em; margin-bottom: -0.3em; font-size: 0.9em; color: #6c757d;">
   <em>note: we are currently hosting this submission form on 
     <a href="https://cryptpad.org/" target="_blank">cryptpad.org</a>, 
     a free, open source, and encrypted Google Forms alternative that has been used by the 
