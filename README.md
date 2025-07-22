@@ -13,7 +13,7 @@ _-> this will take you to the submission form to add datasets to the catalogue._
 
 <p align="center">
   <a href="https://xanderhuggins.github.io/groundwater-data-catalogue/searchable_library.html"> 
-    <img src="https://raw.githubusercontent.com/XanderHuggins/groundwater-data-review/refs/heads/main/assets/search_screenshot.png" 
+    <img src="https://raw.githubusercontent.com/XanderHuggins/groundwater-data-catalogue/refs/heads/main/assets/search_screenshot.png" 
     width="100%"/>
   </a>
 </p>
