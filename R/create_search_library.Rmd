@@ -1,38 +1,74 @@
 ---
-title: "Searchable catalogue of open data to study global groundwater in social-ecological systems"
+title: "Global groundwater data catalogue"
 output: 
   html_document:
     theme: united
     toc: no
 ---
+<style>
+  body {
+    background-color: #ffffff; # change later if needed
+  }
+  h1.title {
+    display: none;
+  }
+  a {
+    color: #00777D; /* change to your desired color */
+  }
+  .para-text {
+    font-size: 0.9em;
+    color: #6c757d;
+  }
+</style>
+
+<!-- Header image (instead of page title) -->
+<div style="text-align: center; margin-bottom: 20px;">
+  <img src="your-header-image.png" alt="Global Groundwater Catalogue" style="max-width: 100%; height: auto;">
+</div>
+
+<!-- BOX 1: about -->
+<div style="border: 5px solid #00777D; padding: 10px; background-color: #f8f8f8; border-radius: 10px; margin-bottom: 20px;">
+   <p> ❓**About**: this catalogue provides a searchable database of open-access global datasets relevant for global studies on groundwater in social-ecological and Earth systems.  <br>
+    <hr style="border: none; height: 2px; background-color: #00777D; margin: 5px 0;">
+  **Read more** about the data catalogue in the associated paper: <a href="https://doi.org/10.1088/1748-9326/adf127" target="_blank">📃Huggins et al. *Environ. Res. Lett.* 2025 </a>
+  <span class="para-text">
+    (<em>link to the paper, opens in new tab</em>)
+  </span>
+  </p>
+</div>
+
 <!-- Info box at top of page -->
-<div style="border: 2px solid #007BFF; padding: 15px; background-color: #f8f9fa; border-radius: 10px; margin-bottom: 20px;">
+<div style="border: 5px solid #00777D; padding: 10px; background-color: #f8f8f8; border-radius: 10px; margin-bottom: 20px;">
   <p>
-  <strong>Find open groundwater data:</strong>
-   This catalogue provides open-access global datasets related to groundwater in social-ecological systems.
+  <strong>This is the initial release (version 1) of the catalogue. </strong> <br>
+  We will release new versions periodically, and each release will be accompanied by a changelog.  All metadata pertaining to each release can be found in this GitHub repository <a href="https://github.com/XanderHuggins/groundwater-data-catalogue/tree/main/catalogue_metadata" target="_blank"> folder</a>.
+  <span class="para-text">
+    (<em>link to the GitHub folder, opens in new tab</em>)
+  </span>
   </p>
   
-  <p>
-  📃 <a href="https://doi.org/10.31223/X5XB07" target="_blank">Read more </a> about the project
-   (<em>link to preprint, opens in new tab</em>)
-  </p>
+  <hr style="border: none; height: 2px; background-color: #00777D; margin: 5px 0;">
   
   
-  <p>
-  💡 <a href="https://cryptpad.fr/form/#/2/form/view/K+LOBsQzQ679qinrawnzvv2rlZTh0U6qteJAZFIZ3Co/" target="_blank">
-  Submit data </a> to the catalogue 
-  (<em>link to the submission form, opens in new tab</em>)
-  </p>
   
-  <p>
-  <em> note: we host this submission form on <a href="https://cryptpad.org/" target="_blank"> CryptPad</a>, 
-  a free, open source, and end-to-end encrypted service.</em>
-  </p>
-  
-   <p>
-  <strong>This is the initial version (V1) of the catalogue. </strong> <br>
-  We will release new versions periodically, and will provide a readme file of catalogue changes with each new release.
-  </p>
+  <div style="margin-bottom: 0.3em;">
+  <strong>Submit data</strong> to the catalogue 
+  <a href="https://cryptpad.fr/form/#/2/form/view/K+LOBsQzQ679qinrawnzvv2rlZTh0U6qteJAZFIZ3Co/" target="_blank">
+    📤<strong>HERE</strong>📤
+  </a> 
+  <span style="font-size: 0.9em; color: #6c757d;">
+    (<em>link to the submission form, opens in new tab</em>)
+  </span>
+</div>
+
+<div style="margin-top: -0.3em; font-size: 0.9em; color: #6c757d;">
+  <em>note: we are currently hosting this submission form on 
+    <a href="https://cryptpad.org/" target="_blank">cryptpad.org</a>, 
+    a free, open source, and encrypted Google Forms alternative that has been used by the 
+    <a href="https://unite.un.org/news/sixteen-organizations-endorse-un-open-source-principles" target="_blank">United Nations</a> 
+    in alignment with open source principles. But yes, we know the name sounds a bit scary!
+  </em>
+</div>
   
 </div>
 
@@ -44,11 +80,14 @@ gs = googlesheets4::read_sheet(ss = "https://docs.google.com/spreadsheets/d/1GBa
   dplyr::filter(!is.na(dataset)) |> dplyr::filter(!is.na(data)) |>  
   dplyr::select(c(dataset, author, system, paper, data, relation, form, type, method, spatial, begin, end, step, iso_1, iso_2, license))
 
+paper_list = gs$paper
+
 gs$paper <- sprintf(
   '<a href="%s" target="_blank">%s</a>',
   gs$paper,   # The URL
   "DOI link"    # The link text
 )
+gs$paper[paper_list == "NA"] = "-/-"
 
 gs$data <- sprintf(
   '<a href="%s" target="_blank">%s</a>',
@@ -56,6 +95,26 @@ gs$data <- sprintf(
   "DOI link"    # The link text
 )
 
+# specifically handle entry(ies) with multiple data URLs
+gs$data[gs$dataset == "Improved 8-day NDVI and EVI"] = c(
+  sprintf(
+  '<a href="%s" target="_blank">%s</a>',
+  "https://doi.org/10.6084/m9.figshare.22220050",   # The URL
+  "DOI1"    # The link text
+  ),
+  sprintf(
+  '<a href="%s" target="_blank">%s</a>',
+  "https://doi.org/10.6084/m9.figshare.22220125",   # The URL
+  "DOI2"    # The link text
+  ),
+  sprintf(
+  '<a href="%s" target="_blank">%s</a>',
+  "https://doi.org/10.6084/m9.figshare.22267048",   # The URL
+  "DOI3"    # The link text
+  )) |> paste(collapse = "<br>\n")
+  
+
+# create the searchable table
 datatable(
   gs,
   escape = FALSE, 
