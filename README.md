@@ -1,6 +1,6 @@
-### Code repository for the global groundwater data catalogue project
+### Code and data repository for the global groundwater data catalogue project
 
-Please choose how you would like to interact with the groundwater data catalogue:
+You can interact with the groundwater data catalogue in a number of ways:
 
 1️⃣-📃: **READ** the paper documenting the catalogue [**HERE**](https://iopscience.iop.org/article/10.1088/1748-9326/adf127) <br>
 _-> this will take you to Huggins et al. Environ. Res. Lett. 2025._
@@ -9,7 +9,7 @@ _-> this will take you to Huggins et al. Environ. Res. Lett. 2025._
 _-> this will take you to the searchable catalogue._
 
 3️⃣-💡: **CONTRIBUTE** to the catalogue [**HERE**](https://cryptpad.fr/form/#/2/form/view/K+LOBsQzQ679qinrawnzvv2rlZTh0U6qteJAZFIZ3Co/) <br>
-_-> this will take you to the submission form to add datasets to the catalogue._
+_-> this will take you to the submission form to submit datasets for inclusion in the catalogue._
 
 <p align="center">
   <a href="https://xanderhuggins.github.io/groundwater-data-catalogue/searchable_library.html"> 
@@ -17,7 +17,6 @@ _-> this will take you to the submission form to add datasets to the catalogue._
     width="100%"/>
   </a>
 </p>
-<br/> 
 
 Contact:<br>                             
 **Xander Huggins** <br>
